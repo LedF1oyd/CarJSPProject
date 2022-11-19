@@ -924,7 +924,7 @@ p3_21600699|schema||p3_21600699||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="271" parent="242" name="carid">
-      <AutoIncrement>17</AutoIncrement>
+      <AutoIncrement>35</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -962,7 +962,7 @@ p3_21600699|schema||p3_21600699||UPDATE|G</Grants>
       <Position>9</Position>
     </column>
     <column id="280" parent="242" name="options">
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <Position>10</Position>
     </column>
     <column id="281" parent="242" name="description">

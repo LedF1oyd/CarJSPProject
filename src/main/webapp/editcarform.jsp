@@ -169,13 +169,11 @@
         </tr>
 
         <tr>
-            <td><a href="cars.jsp">테이블 보기</a></td><td align="right"><input type="submit" value="수정하기"/></td>
+            <td><a href="cars.jsp">테이블 보기</a></td><td align="right">
+            <input type="submit" value="수정하기"/>
+        </td>
         </tr>
 
-
-
-        <tr><td colspan="2"><input type="submit" value="새로 등록"/>
-            <input type="button" value="Cancel" onclick="history.back()"/></td></tr>
     </table>
 </form>
 

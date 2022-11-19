@@ -17,5 +17,13 @@
 
 
     int i=carDAO.updateCar(u);
-    response.sendRedirect("cars.jsp");
+    String msg = "데이터 수정 성공 !";
+    if(i == 0) msg = "[에러] 데이터 수정 실패 ";
+    System.out.println(msg);
+
 %>
+
+<script>
+    alert('<%=msg%>');
+    location.href='cars.jsp';
+</script>

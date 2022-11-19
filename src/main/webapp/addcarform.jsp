@@ -136,7 +136,8 @@
         </tr>
 
         <tr>
-            <td><a href="cars.jsp">테이블 보기</a></td><td align="right"><input type="submit" value="등록"/></td>
+            <td><a href="cars.jsp">테이블 보기</a></td>
+            <td align="right"><input type="submit" value="등록"/></td>
         </tr>
     </table>
 </form>

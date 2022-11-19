@@ -42,14 +42,13 @@ public class CarDAO {
                 + vo.getOptions() + "-" + vo.getDescription()+ "-" + vo.getPrice());
         return 0;
     }
-    private final String CAR_UPDATE = "update secondHandCar set brand=?, carType=?, carName=?, color=?, photo=?, manufacturedDay=?, mileage=?, warranty=?, options=?, description=?, price=? where carid=?";
+    private final String CAR_UPDATE = "update secondHandCar set brand=?, carType=?, carName=?, color=?, photo=?, manufacturedDay=?, mileage=?, warranty=?, options=?, description=?, price=?";
 
     public int updateCar(CarVO vo) {
         System.out.println("===> JDBC로 updateCar() 기능 처리");
         try {
             conn = JDBCUtil.getConnection();
             stmt = conn.prepareStatement(CAR_UPDATE);
-            stmt = conn.prepareStatement(CAR_INSERT);
             stmt.setString(1, vo.getBrand());
             stmt.setString(2, vo.getCarType());
             stmt.setString(3, vo.getCarName());
