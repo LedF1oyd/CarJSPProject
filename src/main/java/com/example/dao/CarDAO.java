@@ -42,7 +42,7 @@ public class CarDAO {
                 + vo.getOptions() + "-" + vo.getDescription()+ "-" + vo.getPrice());
         return 0;
     }
-    private final String CAR_UPDATE = "update secondHandCar set brand=?, carType=?, carName=?, color=?, photo=?, manufacturedDay=?, mileage=?, warranty=?, options=?, description=?, price=?";
+    private final String CAR_UPDATE = "update secondHandCar set brand=?, carType=?, carName=?, color=?, photo=?, manufacturedDay=?, mileage=?, warranty=?, options=?, description=?, price=? where carId=?";
 
     public int updateCar(CarVO vo) {
         System.out.println("===> JDBC로 updateCar() 기능 처리");
@@ -60,6 +60,7 @@ public class CarDAO {
             stmt.setString(9, vo.getOptions());
             stmt.setString(10, vo.getDescription());
             stmt.setString(11, vo.getPrice());
+            stmt.setInt(12, vo.getCarid());
 
 
             System.out.println(vo.getBrand() + "-" + vo.getCarType() + "-" + vo.getCarName() + "-" + vo.getColor()+ "-"
