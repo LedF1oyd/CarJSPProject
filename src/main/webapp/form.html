@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="my.css">
+    <meta charset="utf-8">
+    <style>
+    </style>
+    <script>
+        function check(){
+            if (document.forms["myForm"]["name"].value == "") {
+                alert("차량명을 입력해주세요");
+                return false;
+            }
+            else if (document.forms["myForm"]["color"].value == "") {
+                alert("색깔을 입력해주세요");
+                return false;
+            }
+            else if (document.forms["myForm"]["mileage"].value == "") {
+                alert("주행거리를 입력해주세요");
+                return false;
+            }
+            else if (document.forms["myForm"]["price"].value == "") {
+                alert("가격을 입력해주세요");
+                return false;
+            }
+
+
+            else
+                return true
+
+        }
+    </script>
+</head>
+<body>
+<div id="title">
+    <h2>국산 중고차 전산 등록</h2>
+</div>
+
+
+<form name="myForm" action="form_ok.jsp" method="post" onsubmit="return check()">
+    <div id="brandSelect">
+        <p>차량의 제조사를 선택하여 주세요. </p>  <!-- 제조사 선택, select -->
+        <select id brandSelection name = 'brand'>
+            <option value="현대">현대</option>
+            <option value="기아">기아</option>
+            <option value="제네시스">제네시스</option>
+            <option value="쌍용">쌍용</option>
+            <option value="르노코리아자동차">르노코리아자동차</option>
+            <option value="한국GM">한국GM</option>
+        </select>
+    </div>
+    <div id="carTypeRadio">
+        <p>차종을 골라주세요</p>
+        요
+
+    </div>
+
+    <div id="nameInputText">
+        <p>차량의 이름을 입력하여주세요. </p>    <!-- 차량명 입력, input text -->
+        <label for="name">차량명:  </label>
+        <input type="text" id="name" name="name">
+    </div>
+
+    <div id="colorInputText">
+        <p>차량의 색상을 입력하여주세요. </p>    <!-- 차량명 입력, input text -->
+        <label for="color">색상:  </label>
+        <input type="text" id="color" name="color">
+    </div>
+
+    <div id="manufacturedDay">
+        <p>차량 제조일을 입력해여주세요</p>    <!-- 차량 제조일. date -->
+        <label for="birthDay">제조일</label>
+        <input type="date" id="birthDay" name="birthDay" value="2000-01-01">
+    </div>
+
+    <div id="mileageInputNumber">
+        <p>차량의 주행거리를 입력하여주세요. </p>    <!-- 키로수 입력, input number -->
+        <label for="mileage">주행거리:  </label>
+        <input type="number" id="mileage" name="mileage" min="0" max="1000000">
+        <label for="mileage">km  </label>
+    </div>
+
+    <div id="warrantyCheck">
+        <p>제조사 보증이 유효하다면 체크해주세요</p> <!-- 제조사 보증 여부, input number -->
+        <input type="checkbox" id="warranty" name="warranty" value="Manufacturer Warranty Valid">
+        <label for="warranty">예</label><br>
+    </div>
+
+    <div id="optionCheck">
+        <p>차량이 가지고 옵션이라면 모두 체크해주세요</p> <!-- 옵, input number -->
+        <input type="checkbox" id="led" name="option" value="LED 헤드램프" class="checkSelect">
+        <label for="led">LED 헤드램프</label><br>
+        <input type="checkbox" id="HID" name="option" value="HID 헤드램프" class="checkSelect">
+        <label for="HID">HID 헤드램프</label><br>
+        <input type="checkbox" id="HUD" name="option" value="HUD(Head Up Display)" class="checkSelect">
+        <label for="HUD">HUD(Head Up Display)</label><br>
+        <input type="checkbox" id="열선시트" name="option" value="열선시트" class="checkSelect">
+        <label for="열선시트">열선시트</label><br>
+        <input type="checkbox" id="통풍시트" name="option" value="통풍시트" class="checkSelect">
+        <label for="통풍시트">통풍시트</label><br>
+        <input type="checkbox" id="navigation" name="option" value="내비게이션" class="checkSelect">
+        <label for="navigation">내비게이션</label><br>
+    </div>
+
+    <div id="priceInputNumber">
+        <p>판매 희망 가격을 입력하여주세요. </p>    <!-- 키로수 입력, input number -->
+        <label for="price">가격:  </label>
+        <input type="number" id="price" name="price">
+        <label for="price">원  </label>
+    </div>
+
+    <div id="descriptionTextArea">
+        <p>기타 차량에 대한 설명과 장점을 알려주세요.</p>
+        <textarea id=description name=description style="width:90%;" rows="30"></textarea><br>
+    </div>
+    <div>
+        <input type="submit" value="Submit"><br>
+    </div>
+
+
+</form>
+
+</body>
+</html>
