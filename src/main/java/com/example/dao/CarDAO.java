@@ -46,6 +46,9 @@ public class CarDAO {
 
     public int updateCar(CarVO vo) {
         System.out.println("===> JDBC로 updateCar() 기능 처리");
+        System.out.println(vo.getCarid());
+
+
         try {
             conn = JDBCUtil.getConnection();
             stmt = conn.prepareStatement(CAR_UPDATE);
@@ -65,7 +68,7 @@ public class CarDAO {
 
             System.out.println(vo.getBrand() + "-" + vo.getCarType() + "-" + vo.getCarName() + "-" + vo.getColor()+ "-"
                     + vo.getPhoto() + "-" + vo.getManufacturedDay() + "-" + vo.getMileage()+ "-" + vo.getWarranty() + "-"
-                    + vo.getOptions() + "-" + vo.getDescription()+ "-" + vo.getPrice());
+                    + vo.getOptions() + "-" + vo.getDescription()+ "-" + vo.getPrice()+ "-"+vo.getCarid());
             stmt.executeUpdate();
             return 1;
 

@@ -31,7 +31,8 @@ public class FileUpload {
             filename=multipartRequest.getFilesystemName("photo");
             System.out.println(filename);
             one = new CarVO();
-            String carid=multipartRequest.getParameter("carid");
+            String carid=multipartRequest.getParameter( "carid");
+            System.out.println("editcar에서 받아온 id: "+carid+"이다.");
 
             if(carid!=null&&!carid.equals("")) {
                 one.setCarid(Integer.parseInt(carid));

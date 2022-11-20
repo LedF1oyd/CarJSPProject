@@ -32,22 +32,23 @@
 <body>
 
 <%
-    CarDAO CarDAO = new CarDAO();
-    List<CarVO> list = CarDAO.getCarList();
-    request.setAttribute("list",list);
-    System.out.println();
+    CarDAO carDAO = new CarDAO();
+    String id=request.getParameter("id");
+    System.out.println("cars 에서 editcarform으로 온 id:"+id+"임");
+    CarVO u=carDAO.getCar(Integer.parseInt(id));
 %>
 
 <h1>Edit Form</h1>
 <form action="editcar.jsp" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="seq" />
+    <input type="hidden" name="carid" id="carid" value="<%=u.getCarid() %>" />
     <table>
+        <tr><td><%=u.getCarid() %>번 차량 수정</td></tr>
         <tr>
             <td>
                 차량의 제조사를 선택하여 주세요.
             </td>
             <td>
-                <select id brandSelection name = 'brand' />
+                <select id="brandSelection" name = 'brand' />
                     <option value="현대">현대</option>
                     <option value="기아">기아</option>
                     <option value="제네시스">제네시스</option>
@@ -80,7 +81,7 @@
             </td>
             <td>
                 <label for="carName">차량명:  </label>
-                <input type="text" id="carName" name="carName">
+                <input type="text" id="carName" name="carName" value="<%= u.getCarName()%>">
             </td>
         </tr>
         <tr>
@@ -89,7 +90,7 @@
             </td>
             <td>
                 <label for="color">색상:  </label>
-                <input type="text" id="color" name="color">
+                <input type="text" id="color" name="color" value="<%=u.getColor()%>">
             </td>
         </tr>
         <tr>
@@ -97,7 +98,15 @@
                 차량의 사진파일을 업로드하여주세요
             </td>
             <td>
-                <input type="file" name="photo" value="${u.getPhoto()}"/>
+                <input type="file" name="photo" />
+                <c:if test="${u.getPhoto() ne ''}"><br/>
+                    <img src="${pageContext.request.contextPath}/upload/<%=u.getPhoto()%>"
+                         style="width:100px; height:100px;"><%=u.getPhoto()%>
+                </c:if>
+
+
+            </td>
+            <td>
 
             </td>
 
@@ -108,7 +117,7 @@
             </td>
             <td>
                 <label for="manufacturedDay">제조일</label>
-                <input type="date" id="manufacturedDay" name="manufacturedDay" value="2000-01-01">
+                <input type="date" id="manufacturedDay" name="manufacturedDay" value="<%=u.getRegDate()%>">
             </td>
         </tr>
         <tr>
@@ -117,7 +126,7 @@
             </td>
             <td>
                 <label for="mileage"></label>
-                <input type="number" id="mileage" name="mileage" min="0" max="1000000">
+                <input type="number" id="mileage" name="mileage" min="0" max="1000000" value="<%=u.getMileage()%>">
                 <label for="mileage">km  </label>
             </td>
         </tr>
@@ -154,7 +163,7 @@
                 기타 차량에 대한 설명과 장단점을 알려주세요.
             </td>
             <td>
-                <textarea id=description name=description style="width:90%;" rows="30"></textarea><br>
+                <textarea id=description name=description style="width:90%;" rows="30" value="<%=u.getDescription()%>"></textarea><br>
             </td>
         </tr>
         <tr>
@@ -163,7 +172,7 @@
             </td>
             <td>
                 <label for="price">가격:  </label>
-                <input type="number" id="price" name="price">
+                <input type="number" id="price" name="price" value="<%=u.getPrice()%>">
                 <label for="price">원  </label>
             </td>
         </tr>

@@ -6,14 +6,15 @@
 
 
 
-<%--<jsp:useBean id="u" class="com.example.bean.CarVO" />
-<jsp:setProperty property="*" name="u"/>--%>
+
 
 <%
     request.setCharacterEncoding("utf-8");
     CarDAO carDAO = new CarDAO();
+
     FileUpload upload =new FileUpload();
     CarVO u = upload.uploadPhoto(request);
+    System.out.println("editcar.jsp에 들어온 id: "+u.getCarid());
 
 
     int i=carDAO.updateCar(u);
