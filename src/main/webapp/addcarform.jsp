@@ -16,7 +16,7 @@
                 차량의 제조사를 선택하여 주세요.
             </td>
             <td>
-                <select id brandSelection name = 'brand'>
+                <select id = "brandSelection" name = "brand">
                     <option value="현대">현대</option>
                     <option value="기아">기아</option>
                     <option value="제네시스">제네시스</option>

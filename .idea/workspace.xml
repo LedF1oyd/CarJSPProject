@@ -11,11 +11,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f989d58f-b3af-46b4-bdbd-a9a788d1afd9" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/CarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/CarDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/FileUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/FileUpload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cars.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cars.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editcar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editcar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editcarform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editcarform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boardjspproject/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boardjspproject/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addcarform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addcarform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addpost.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addpostform.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/deletepost.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editform.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editpost.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/posts.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +68,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   },
@@ -138,7 +142,16 @@
       <workItem from="1668755205572" duration="4415000" />
       <workItem from="1668793743991" duration="164000" />
       <workItem from="1668793926950" duration="32906000" />
-      <workItem from="1668882610065" duration="7162000" />
+      <workItem from="1668882610065" duration="7400000" />
+      <workItem from="1669002633787" duration="83000" />
+      <workItem from="1669022722448" duration="12000" />
+      <workItem from="1669968675037" duration="54000" />
+      <workItem from="1669969266684" duration="1955000" />
+      <workItem from="1670005815534" duration="233000" />
+      <workItem from="1670006107368" duration="10949000" />
+      <workItem from="1670492641231" duration="105000" />
+      <workItem from="1670518833315" duration="14000" />
+      <workItem from="1671091238967" duration="247000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668878332413</created>
@@ -175,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668882833511</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1668934938848</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668934938848</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
